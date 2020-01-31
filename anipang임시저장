@@ -1,0 +1,22 @@
+def pangstart(anipang):
+    for i in range(5):
+        for j in range(3):
+            if (anipang[i,j]==anipang[i,j+1]) and (anipang[i,j+1]==anipang[i,j+2]):
+                    anipang[1:i+1,j:j+3]=anipang[0:i,j:j+3]
+                    # i = 3 j =0 
+                    anipang[0,j:j+2]=0
+            else:
+                pass
+    for i in range(3):
+        for j in range(5):
+            if (anipang[i][j]==anipang[i+1][j]) and (anipang[i+1][j]==anipang[i+2][j]):
+                if i ==0:   # i= 0 j= 1
+                    anipang[0:3][j]=0
+                elif i==1:  # i= 1 j= 4
+                    anipang[3:4][j]=anipang[0:1][j]
+                    anipnag[0:3][j]=0
+                else:
+                    anipang[4:5][j]=anipang[0:2][j]
+                    anipang[0:3][j]=0
+            
+pangstart(anipang)
