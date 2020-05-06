@@ -1,0 +1,43 @@
+05-06
+데이콘 유튜브설명:
+
+9:30 사용된 위성: GPM core observatory
+-마이크로파 이미져 센서 GMI(GPM Microwave Imager)
+와 레이더 센서 DPR(Dual frequency Precipitation Radar)탑재
+-GMI센서는 890km로 센서가 관측해서 좋음
+DPR은 245km,125km 관측폭밖에 안됨
+그래서 gmi에 비해 남는 부분은 강수량에 대한 참값이 없어서
+micro파로만 강수량을 예측하려고함
+gpm에도 밝기만으로 예측하려는 시도를 많이함
+
+10:00 1) GPM GMI Specification(10~89GHz)
+ 
+2) GPM DPR Specification
+
+13:00
+
+
+
+
+
+
+
+-------------------------------------------------
+
+1.train.zip: 
+-데이터 컬럼: 
+	채널0~8 밝기온도
+	채널9 지표 타입 (앞자리 0: Ocean, 앞자리 1: Land, 
+앞자리 2: Coastal, 앞자리 3: Inland Water)
+	채널10 GMI 경도
+	채널11 GMI 위도
+	채널12 DPR 경도
+	채널13 DPR 위도
+	채널14 강수량 (mm/h, 결측치는 -9999.xxx 형태의 float 값으로 표기)
+2.test.zip:
+-데이터 컬럼:
+	채널0~13까지 같음
+3.sample_submission.csv:
+-데이터 컬럼:
+	id orbit번호_subset번호 (######_##)
+	px_1~px_1600 픽셀 번호
